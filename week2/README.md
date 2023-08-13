@@ -26,3 +26,85 @@ console.log(++a);  // a 先自增为 12，然后输出 12
 console.log(--b);  // b 先自减为 9，然后输出 9
 console.log(b--);  // 输出 9，然后 b 自减为 8
 ```
+
+## 四
+### 行内式
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内式弹窗</title>
+</head>
+<body>
+    <input type="button" value="Alert" onclick="alert('极客时间')" />
+    <input type="button" value="Console.log" onclick="console.log('极客时间')" />
+    <input type="button" value="Prompt" onclick="prompt('极客时间')" />
+</body>
+</html>
+```
+
+### 内嵌式
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内式弹窗</title>
+</head>
+<body>
+    <input type="button" value="Alert" onclick="showAlert()" />
+    <input type="button" value="Console.log" onclick="showConsole()" />
+    <input type="button" value="Prompt" onclick="showPrompt()" />
+</body>
+<script type="text/javascript">
+    function showAlert() {
+        alert('极客时间')
+    }
+
+    function showConsole() {
+        console.log('极客时间')
+    }
+
+    function showPrompt() {
+        prompt('极客时间')
+    }
+</script>
+</html>
+```
+
+### 引入外部文件
+**JS 部分**
+```javascript
+// index.js
+function showAlert() {
+        alert('极客时间')
+    }
+
+    function showConsole() {
+        console.log('极客时间')
+    }
+
+    function showPrompt() {
+        prompt('极客时间')
+    }
+```
+**HTML 部分**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内式弹窗</title>
+</head>
+<body>
+    <input type="button" value="Alert" onclick="showAlert()" />
+    <input type="button" value="Console.log" onclick="showConsole()" />
+    <input type="button" value="Prompt" onclick="showPrompt()" />
+</body>
+<script type="text/javascript" scr="./index.js"></script>
+</html>
+```
