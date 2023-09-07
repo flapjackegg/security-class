@@ -1,9 +1,17 @@
 ## 第一题
 
+本次扫描的目标为 "菜鸟 www.cainiao.com"
+
+xray(被动模式) 的报告为当前目录下 `cainiao_xray_proxy_scan.html`
+AWVS 的报告为当前目录下 `AWVS_Comprehensive_cainiao.html`
+
+AWVS 扫描的非常全，会像爬虫一样扫描到所有相关联的目标，但是耗时也非常长，需要好几个小时，也有很大的被 ban 的风险
+xray 可以按需进行扫描，但是可能覆盖的不是很全，很多入口手动可能并不会发现导致漏掉，相对的被 ban 的风险也会变小
+
 
 ## 第二题
 
-报告为当前目录下 `detail_vul_by_host.html`
+报告为当前目录下 `nessus_detail_vuln_by_host.html`
 
 
 ## 第三题
